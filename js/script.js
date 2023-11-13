@@ -13,8 +13,8 @@ const draggables = document.querySelectorAll('.draggable');
 const dropzones = document.querySelectorAll('.dropzone');
 const quizzSwipeOptions = document.querySelectorAll('.quizz-swipe-options');
 
-const minWindowSize = 1280;
-let currentPosition = 1280;
+const minWindowSize = window.innerWidth;
+let currentPosition = minWindowSize;
 let currentQuestion = 0;
 let timeInQuizz;
 const questionsTimes = [10,10,8,9,10];

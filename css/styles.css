@@ -82,7 +82,7 @@
     
     #section-container > section > .container {
         width: 1280px;
-        height: 686px;
+        height: 100vh;
         flex-direction: column;
     }
     
@@ -104,7 +104,7 @@
     }
     
     #questions > form > .container {
-        height: 686px;
+        height: 100vh;
         display: flex;
         overflow: hidden;
         left: 0px;
@@ -120,9 +120,18 @@
         -webkit-transition: left 1s ease;
         transition: left 1s ease;
     }
+
+    #questions > form > .container > .question--container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
     
     #questions > form > .container > .question {
-        min-width: 1280px;
+        width: 1280px;
         height: 686px;
     }
     
