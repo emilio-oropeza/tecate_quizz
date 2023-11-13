@@ -36,15 +36,21 @@ draggables.forEach(draggable => {
     draggable.addEventListener('touchstart', pickup);
     draggable.addEventListener('touchmove', move);
     draggable.addEventListener('touchend', drop);
+    
+    draggable.addEventListener('mousedown', pickup);
+    draggable.addEventListener('mousemove', move);
+    draggable.addEventListener('mouseup', drop);
 });
 
-quizzSwipeOptions.forEach(quizzSwipeOption => 
-    quizzSwipeOption.addEventListener('touchmove', move)
-);
+quizzSwipeOptions.forEach(quizzSwipeOption => {
+    quizzSwipeOption.addEventListener('touchmove', move);
+    quizzSwipeOption.addEventListener('mousemove', move);
+});
 
-dropzones.forEach(dropzone => 
-    dropzone.addEventListener('touchend', drop)
-);
+dropzones.forEach(dropzone => {
+    dropzone.addEventListener('touchend', drop);
+    draggable.addEventListener('mouseup', drop);
+});
 
 async function init() {
     coverLink.addEventListener('click', goToNextQuestion);
