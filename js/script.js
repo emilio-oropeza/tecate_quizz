@@ -49,7 +49,7 @@ quizzSwipeOptions.forEach(quizzSwipeOption => {
 
 dropzones.forEach(dropzone => {
     dropzone.addEventListener('touchend', drop);
-    draggable.addEventListener('mouseup', drop);
+    dropzone.addEventListener('mouseup', drop);
 });
 
 async function init() {
